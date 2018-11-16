@@ -10,22 +10,22 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class RingingComponent implements OnInit {
 
   interval: any;
-  id: number = 0;
 
-  constructor(private router: Router, private route: ActivatedRoute,
-    private callService: CallService) { }
+  constructor(private router: Router, private route: ActivatedRoute, private callService: CallService) { }
+
   ngOnInit() {
     let number = null;
+
     this.route.params.subscribe(params => { number = params.number; });
     this.callService.placeCall(number);
+
     this.interval = setInterval(() => {
       this.callService.checkStatus();
-      if(this.callService.isConnected()){
-      this.router.navigate(['/call']);
-      clearInterval(this.interval);
+
+      if (this.callService.isConnected()) {
+        this.router.navigate(['/call']);
+        clearInterval(this.interval);
       }
-      }, 100);
+    }, 100);
   }
-
-
 }
