@@ -1,21 +1,21 @@
-import { Injectable } from "@angular/core"
-import { HttpClient, HttpParams } from "@angular/common/http"
-import { Call } from "./call"
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Call } from './call';
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class CallService {
 
-  constructor(private http: HttpClient) { };
-  private apiUrl: string = "http://localhost:3000";
+  constructor(private http: HttpClient) { }
+  private apiUrl = 'http://localhost:3000';
   private callId: number = null;
 
   private callStatus: string = null;
 
   placeCall(number: string) {
-    const postData = { first_number: "999999999", second_number: number }
-    this.http.post<Call>(this.apiUrl + "/call", postData).subscribe(data => {
+    const postData = { first_number: '999999999', second_number: number };
+    this.http.post<Call>(this.apiUrl + '/call', postData).subscribe(data => {
       this.callId = data.id;
     });
   }
