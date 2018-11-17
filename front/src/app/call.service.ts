@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core"
-import { HttpClient , HttpParams } from "@angular/common/http"
+import { HttpClient, HttpParams } from "@angular/common/http"
 import { Call } from "./call"
 
 @Injectable({
@@ -29,10 +29,8 @@ export class CallService {
 
   isFinished(): boolean {
     return this.callStatus === 'ANSWERED';
-    }
-    isConnected(): boolean {
+  }
+  isConnected(): boolean {
     return this.callStatus === 'CONNECTED';
-    }
-
-
+  }
 }
