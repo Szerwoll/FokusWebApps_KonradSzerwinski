@@ -21,6 +21,7 @@ export class CallService {
   }
   checkStatus() {
     const queryParams = new HttpParams().set('id', String(this.callId));
+    console.log(this.callStatus);
     this.http.get<Call>(this.apiUrl + '/status', { params: queryParams })
       .subscribe(data => {
         this.callStatus = data.status;
