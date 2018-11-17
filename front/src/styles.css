@@ -115,6 +115,7 @@ h6 {
 }
 
 .form-number {
+  /* unicode-range: U+30-39; */
   width: 400px;
   height: 55px;
   padding: 20px;
@@ -146,7 +147,6 @@ h6 {
 }
 
 .call-button:hover {
-  /* filter: brightness(80%); */
   color: white;
   background-color: #4CAF50;
 }
@@ -154,4 +154,22 @@ h6 {
 .error {
   border: 2px solid #FF0000;
   background: rgba(255, 170, 170, 0)
+}
+
+/* Floating button style */
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#0C9;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+	margin-top:17px;
 }
