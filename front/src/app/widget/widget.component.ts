@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class WidgetComponent implements OnInit {
   number: string;
   validator = /(^[0-9]{9}$)/;
-  exampleText = 'Focus Web Kurs';
+  exampleText = 'Fokus Web App';
 
   // constructor(private callService: CallService) {}
 
@@ -26,6 +26,7 @@ export class WidgetComponent implements OnInit {
     if (this.isValidNumber()) {
       this.router.navigate(['/ringing/' + this.number]);
     } else {
+      // tslint:disable-next-line:no-console
       console.info('Numer niepoprawny');
     }
   }

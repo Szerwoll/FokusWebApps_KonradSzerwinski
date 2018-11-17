@@ -1,11 +1,13 @@
-<div class="text">
+<!-- <div class="text clearfix">
   {{exampleText}}
-</div>
+</div> -->
 <div class="header clearfix">
-  Zadzwonimy do Ciebie w ciągu 26 sekund.
+  Zadzwonimy do Ciebie w ciągu kilku sekund.
 </div>
 <label class="form-label clearfix" for="form-number">
   Wprowadź numer
+  <div class="arrow bounce"></div>
+  <br />
 </label>
 <input [(ngModel)]="number" [ngClass]="{ error: !isValidNumber() }" class="form-number clearfix" id="form-number"
   (keyup)="isValidNumber()" (keyup.enter)="call()" />
