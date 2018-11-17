@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CallService } from './../call.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -22,6 +22,7 @@ export class CallComponent implements OnInit {
         this.router.navigate(['/finished']);
         clearInterval(this.interval);
       }
+
     }, 100);
   }
 
