@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CallService } from './../call.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { StaticSymbol } from '@angular/compiler';
 
 @Component({
   selector: 'app-ringing',
@@ -15,6 +16,7 @@ export class RingingComponent implements OnInit {
 
   ngOnInit() {
     let number = null;
+    let statusRingingAchived = false;
 
     this.route.params.subscribe(params => { number = params.number; });
     this.callService.placeCall(number);
@@ -22,7 +24,16 @@ export class RingingComponent implements OnInit {
     this.interval = setInterval(() => {
       this.callService.checkStatus();
 
-    if (this.callService.isConnected()) {
+    if (this.callService.isRinging()) {
+        statusRingingAchived = true;
+    }
+    console.log(statusRingingAchived);
+
+    if (this.callService.isFailed() && statusRingingAchived) {
+      this.router.navigate(['/failed/' + number]);
+      clearInterval(this.interval);
+    }
+    if (this.callService.isConnected() && statusRingingAchived) {
         this.router.navigate(['/call']);
         clearInterval(this.interval);
       }

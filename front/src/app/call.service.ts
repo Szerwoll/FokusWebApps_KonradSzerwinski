@@ -36,4 +36,12 @@ export class CallService {
   isConnected(): boolean {
     return this.callStatus === 'CONNECTED';
   }
+
+  isFailed(): boolean {
+    return this.callStatus === 'FAILED';
+  }
+
+  isRinging(): boolean {
+    return this.callStatus === 'RINGING';
+  }
 }

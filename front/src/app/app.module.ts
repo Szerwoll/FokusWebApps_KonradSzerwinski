@@ -11,9 +11,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { RingingComponent } from './ringing/ringing.component';
 import { CallComponent } from './call/call.component';
 import { FinishedComponent } from './finished/finished.component';
+import { FailedComponent } from './failed/failed.component';
 
 @NgModule({
-  declarations: [AppComponent, PanelComponent, WidgetComponent, RingingComponent, CallComponent, FinishedComponent],
+  declarations: [AppComponent, PanelComponent, WidgetComponent, RingingComponent, CallComponent, FinishedComponent, FailedComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [CallService],
   bootstrap: [AppComponent],
