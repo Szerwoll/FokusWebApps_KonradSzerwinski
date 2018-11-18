@@ -36,8 +36,4 @@ export class CallService {
   isConnected(): boolean {
     return this.callStatus === 'CONNECTED';
   }
-
-  isBusy(): boolean {
-    return this.callStatus === 'BUSY';
-  }
 }
