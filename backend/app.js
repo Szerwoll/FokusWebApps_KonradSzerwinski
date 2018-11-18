@@ -4,10 +4,11 @@ const bodyParser = require('body-parser');
 var app = express();
 var _bridge = null;
 
+// Comment this for offline mode
 Dialer.configure({
-    login: 'focus13',
-    password: '1hg8du6c0lh',
-    url: 'https://uni-call.fcc-online.pl'
+    login: 'login',
+    password: 'password',
+    url: 'url'
 });
 
 app.use(function (req, res, next) {
