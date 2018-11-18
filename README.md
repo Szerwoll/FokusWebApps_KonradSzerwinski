@@ -30,7 +30,7 @@ This will install Angular CLI in latest version on your system.
 Run `windows_init_application.bat` to download all necessary `npm packages`.
 
 ### On Linux
-> I'm sorry but for some time I do not have linux on my laptop. That's why I do not any "fancy" starting and initializing script :( 
+> I'm sorry but for some time I do not have linux on my laptop. That's why I do not any fancy starting and initializing script :( 
 
 Go to `backend` folder, open terminal and use command `npm install`.
 This same steps make in `front` folder.
