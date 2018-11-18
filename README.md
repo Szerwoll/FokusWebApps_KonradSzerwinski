@@ -4,3 +4,4 @@ Application in widget form. App call to two phone numbers, if both will pick up 
 
 ## Instalation
 
+### On Windows 
