@@ -27,7 +27,7 @@ export class RingingComponent implements OnInit {
     if (this.callService.isRinging()) {
         statusRingingAchived = true;
     }
-    console.log(statusRingingAchived);
+    // console.log(statusRingingAchived);
 
     if (this.callService.isFailed() && statusRingingAchived) {
       this.router.navigate(['/failed/' + number]);
