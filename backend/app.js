@@ -23,8 +23,6 @@ app.listen(3000, function () {
     console.log('Sitecall app listening on port 3000!');
 });
 
-//Dialer.call(722369341, 663599271);
-
 app.post('/call', async function (req, res) {
     let data = req.body;
 

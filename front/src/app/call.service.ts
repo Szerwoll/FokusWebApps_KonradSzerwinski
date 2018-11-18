@@ -19,6 +19,7 @@ export class CallService {
       this.callId = data.id;
     });
   }
+
   checkStatus() {
     const queryParams = new HttpParams().set('id', String(this.callId));
     console.log(this.callStatus);
@@ -31,7 +32,12 @@ export class CallService {
   isFinished(): boolean {
     return this.callStatus === 'ANSWERED';
   }
+
   isConnected(): boolean {
     return this.callStatus === 'CONNECTED';
+  }
+
+  isBusy(): boolean {
+    return this.callStatus === 'BUSY';
   }
 }
