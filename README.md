@@ -66,4 +66,12 @@ Go to `backend` folder, open terminal and use command `node app.js`, then go to 
 
 > Commands will work on Windows too.
 
+### After run servers
+
+Open new tab on browser and go to [localhost:4200](localhost:4200) adress.
+
+## Finish!
+You will see running application!
+
+
 
