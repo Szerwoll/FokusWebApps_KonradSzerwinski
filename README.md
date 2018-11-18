@@ -13,7 +13,9 @@ AngularCLI 7+
 
 ### On Windows 
 Simply run `windows_init_application.bat` to download all necessary `npm packages`.
+
 > Or, if you do not want to use `.bat` files.
+
 Go to `backend` folder, open terminal and use command `npm install`.
 This same steps make in `front` folder.
 ### On Linux
