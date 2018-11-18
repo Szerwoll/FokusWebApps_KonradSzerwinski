@@ -17,9 +17,9 @@ export class BusyComponent implements OnInit {
     this.interval = setInterval(() => {
 
       this.callService.checkStatus();
-        if (this.callService.isFinished()) {
+        if (this.callService.isConnected()) {
 
-        this.router.navigate(['/finished']);
+        this.router.navigate(['/call']);
         clearInterval(this.interval);
       }
 

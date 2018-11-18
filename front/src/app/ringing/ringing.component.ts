@@ -22,7 +22,12 @@ export class RingingComponent implements OnInit {
     this.interval = setInterval(() => {
       this.callService.checkStatus();
 
-      if (this.callService.isConnected()) {
+      if (this.callService.isBusy()) {
+
+        this.router.navigate(['/busy']);
+        clearInterval(this.interval);
+
+      } else if (this.callService.isConnected()) {
         this.router.navigate(['/call']);
         clearInterval(this.interval);
       }
