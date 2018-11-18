@@ -35,6 +35,16 @@ This same steps make in `front` folder.
 
 > Same command on Windows if you do not want to use `.bat` files.
 
+## Configuration
+In `app.js` file change `Dialer.config` variables.
+```javascript
+    Dialer.configure({
+    login: 'login',
+    password: 'password',
+    url: 'url'
+});
+```
+
 ## Usage
 
 ### Windows
@@ -46,3 +56,5 @@ Run `run_on_windows.bat`. This file will run other two `.bat` files with command
 Go to `backend` folder, open terminal and use command `node app.js`, then go to `front` folder and in terminal use `ng serve` command.
 
 > Commands will work on Windows too.
+
+
