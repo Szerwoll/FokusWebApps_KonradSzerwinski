@@ -42,7 +42,16 @@ In `app.js` file change `Dialer.config` variables.
     login: 'login',
     password: 'password',
     url: 'url'
-});
+    });
+```
+If you do not have config variables, you can still use app in OFLINE mode!
+Simply comment `Dialer.config`!
+```javascript
+//    Dialer.configure({
+//    login: 'login',
+//    password: 'password',
+//    url: 'url'
+//    });
 ```
 
 ## Usage
