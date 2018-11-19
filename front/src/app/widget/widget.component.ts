@@ -17,7 +17,6 @@ export class WidgetComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
-    this.validator = /^(?:\(?\+?48)?(?:[-\.\(\)\s\+\48]*(\d)){9}\)?$/;
   }
 
   call() {
