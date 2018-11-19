@@ -46,7 +46,7 @@ In `app.js` file change `Dialer.config` variables.
     url: 'url'
     });
 ```
-If you do not have config variables, you can still use app in OFLINE mode!
+If you do not have config variables, you can still use app in OFFLINE mode!
 Simply comment `Dialer.config`!
 ```javascript
 //    Dialer.configure({
