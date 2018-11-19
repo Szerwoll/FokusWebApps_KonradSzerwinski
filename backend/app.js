@@ -6,9 +6,9 @@ var _bridge = null;
 
 // Comment this for offline mode
 Dialer.configure({
-    login: 'login',
-    password: 'password',
-    url: 'url'
+    login: 'focus13',
+    password: '1hg8du6c0lh',
+    url: 'https://uni-call.cff-online.pl'
 });
 
 app.use(function (req, res, next) {
