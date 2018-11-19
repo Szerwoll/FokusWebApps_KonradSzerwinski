@@ -8,7 +8,7 @@ var _bridge = null;
 Dialer.configure({
     login: 'focus13',
     password: '1hg8du6c0lh',
-    url: 'https://uni-call.cff-online.pl'
+    url: 'https://uni-call.fcc-online.pl'
 });
 
 app.use(function (req, res, next) {
