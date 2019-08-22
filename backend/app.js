@@ -6,8 +6,8 @@ var _bridge = null;
 
 // Comment this for offline mode
 Dialer.configure({
-    login: 'focus13',
-    password: '1hg8du6c0lh',
+    login: '',
+    password: '',
     url: 'https://uni-call.fcc-online.pl'
 });
 
